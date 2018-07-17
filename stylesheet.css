@@ -1,0 +1,46 @@
+body {
+	overflow: hidden;
+	margin: 0;
+    padding: 0;
+}
+
+#left{
+	position: absolute;
+	float: left;
+	width:25%;
+	height:100%;
+	border: 1px solid black;
+	text-align: center;
+	overflow: scroll;
+	user-select: none;
+}
+
+#right{
+	position: absolute;
+	left: 25.5%;
+	width: 75%;
+	height:100%;
+	border: 1px solid black;
+	text-align: center;
+	overflow: scroll;
+	user-select: none;
+}
+
+#heading{
+	font-weight: bold;
+}
+
+#left input{
+	box-shadow: rgba(0,0,0,0.2) 3px 3px;
+	width: 80%;
+	height: 25px;
+}
+
+#right input{
+	box-shadow: rgba(0,0,0,0.2) 3px 3px;
+	width:60%;
+	height: 25px;
+}
+
+
+
