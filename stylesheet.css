@@ -5,6 +5,7 @@ body {
 }
 
 #left{
+	display:inline;
 	position: absolute;
 	float: left;
 	width:25%;
@@ -13,9 +14,12 @@ body {
 	text-align: center;
 	overflow: scroll;
 	user-select: none;
+	clear:both;
+	
 }
 
 #right{
+	display:inline;
 	position: absolute;
 	left: 25.5%;
 	width: 75%;
@@ -24,6 +28,7 @@ body {
 	text-align: center;
 	overflow: scroll;
 	user-select: none;
+	clear:both;
 }
 
 #heading{
@@ -77,14 +82,8 @@ strong{
 	margin-left: 2%
 }
 
-#tableBox{
-	height: 100vh;
-	overflow: auto;
-}
-
-#itemBox{
-	height: 150vh;
-	overflow: auto;
+.container{
+	overflow:scroll;
 }
 
 .head{
