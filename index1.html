@@ -19,6 +19,35 @@
     
    
 		<title>Zemoso Restaurant</title>
+		<style>
+/*body {
+    background-color: tan;
+    color: black;
+}*/
+
+/* On screens that are 992px wide or less, the background color is blue */
+@media screen and (max-width: 992px) {
+    /*body {
+        background-color: blue;
+        color: white;
+    }*/
+    .left{
+    	display:none;
+    	
+}
+}
+
+/* On screens that are 600px wide or less, the background color is olive */
+@media screen and (max-width: 600px) {
+    /*body {
+        background-color: olive;
+        color: white;
+    }*/
+    .left{
+    	display:none;
+
+}
+</style>
 	</head>
 
 	<body onload="loadPage()" >
@@ -33,7 +62,8 @@
 			    <input id="searchFood" type="text" name="foodItem" onkeyup="searchFood()" placeholder="Search menu.. by food,by course">
 			    <div id="itemBox"></div>
 		    </div>
-		    <!-- The Modal -->
+
+<!-- The Modal -->
 		<div id="myModal" class="modal">
 		  <!-- Modal content -->
 		  <div class="modal-content">

@@ -36,12 +36,15 @@ function loadPage() {
     div.setAttribute("draggable", true);
     div.addEventListener("dragover", allowDrop);
     div.addEventListener("dragstart", drag);
-
+    
     var divInfo = document.createElement('div');
     divInfo.className = "info";
     divInfo.innerText = "Rs. " + items[i].cost;
     div.appendChild(divInfo);
     document.getElementById('itemBox').appendChild(div);
+    div.addEventListener("click", function() {
+      showTable(this);
+    });
   }
 }
 
@@ -146,6 +149,7 @@ function showBill(table) {
   }
 }
 
+
 function setData(id) {
   var tableData = document.getElementById("tableData");
   var c = "<tr style='font-weight:bold'><td>Item</td><td>Number of servings</td><td>Total Price</td></tr>";
@@ -162,6 +166,7 @@ function setData(id) {
       + "</h4><button id='final' onclick='bill(" + id + ")'>Generate Bill/Close Session</button></div>";
 
 }
+
 
 function change(ev){
   var data = ev.target.id;
@@ -200,7 +205,7 @@ function change(ev){
 
 function bill(id){
   var modal = document.getElementsByClassName("modal-content")[0];
-  
+
   modal.style.textAlign = "centre";
   var title = "<h3>Bill for Table-"+(id+1)+"</h3>";
   var c = "<tr style='font-weight:bold'><td>Item</td><td>quantity</td><td>Total Price</td></tr>";
@@ -225,3 +230,48 @@ function reload(){
   var content = container.innerHTML;
   container.innerHTML= content;
 }
+
+
+
+
+
+
+
+function showTable(item) {
+  // var modal = document.getElementById('myModal');
+  // var span = document.getElementsByClassName("close")[0];
+  // modal.style.display = "block";
+
+  // // document.getElementById(item.id).style.backgroundColor = "#ffc04a";
+  // // document.getElementById('T' + (parseInt(item.id) )).style.backgroundColor = "#ffc04a";
+
+  // // var top = document.getElementById('top');
+  // top.innerHTML = "Add to table";
+  // // id=  ;
+  // setData(id);
+
+var txt;
+    var table = prompt("Please enter your table:", "1");
+    if (table == null || table == "") {
+        txt = "User cancelled the prompt.";
+    } else {
+        setData(table);
+    }
+
+
+  // //close
+  // span.onclick = function() {
+  //   // document.getElementById(modalcontent).innerHTML = "";
+  //   modal.style.display = "none";
+  //   if(key == 1) {
+  //     document.getElementsByClassName("modal-content")[0].innerHTML = actModal;
+  //   }
+  //   document.getElementById(item.id).style.backgroundColor = "white";
+  //   document.getElementById('T' + (parseInt(item.id) + 1)).style.backgroundColor = "white";
+  // }
+
+  
+}
+
+
+
