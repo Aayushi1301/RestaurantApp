@@ -4,7 +4,7 @@ body {
     padding: 0;
 }
 
-#left{
+.left{
 	height:100%;
 	
 overflow-y: scroll;
@@ -14,7 +14,7 @@ border: 1px solid black;
 	
 }
 
-#right{
+.right{
 
 	float:left;
 	height:100%;
@@ -33,13 +33,13 @@ border: 1px solid black;
 	font-size: 20px;
 }
 
-#left input{
+.left input{
 	box-shadow: rgba(0,0,0,0.2) 3px 3px;
 	width: 80%;
 	height: 25px;
 }
 
-#right input{
+.right input{
 	box-shadow: rgba(0,0,0,0.2) 3px 3px;
 	width:60%;
 	height: 25px;
