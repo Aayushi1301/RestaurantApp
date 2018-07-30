@@ -252,12 +252,14 @@ function showTable(item) {
 
 var txt;
     var table = prompt("Please enter your table:", "1");
+    var quant=prompt("Please enter number of servings:", "1");
     if (table == null || table == "") {
         txt = "User cancelled the prompt.";
     } else {
-        setData(table);
+        setData(this);
+        showBill(this);
     }
-
+    
 
   // //close
   // span.onclick = function() {
