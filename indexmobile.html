@@ -3,23 +3,11 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 		<link type="text/css" rel="stylesheet" href="stylesheet1.css"/>
-		
-   
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!---<meta name="viewport" content="width=device-width, initial-scale=1">-->
- <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
-    
-   
-		<title>Zemoso Restaurant</title>
-		<style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
 /*body {
     background-color: tan;
     color: black;
@@ -31,8 +19,13 @@
         color: white;
     }*/
     .left{
-    	display:none;
+    	width:290px;
+    	height:28%;
     	
+}
+.right{
+width:290px;
+height:72%;
 }
 }
  On screens that are 600px wide or less, the background color is olive 
@@ -42,23 +35,30 @@
         color: white;
     }*/
     .left{
-    	display:none;
+    	width:290px;
+    	height:28%;
 }
-</style>
+.right{
+	width:290px;
+	height:72%;
+}
+</style> 
+	    <title>Zemoso Restaurant</title>
+	    
 	</head>
 	<body onload="loadPage()" >
         <div class="container">
-		    <div class="col-sm-12 col-md-3 col-lg-3 left" >
+		    <div class="col-sm-12 col-md-3 col-lg-3 left border-top-0" >
 			    <div id="heading">Tables</div>
 			    <input  id="searchTable" type="text" name="tableNo" onkeyup="searchTable()" placeholder="Search table">
 			    <div id="tableBox"></div>
 		    </div>
-		    <div class="col-sm-12 col-md-9 col-lg-9 right" >
+		    <div class="col-sm-12 col-md-9 col-lg-9 right border-top-0" >
 			    <div id="heading">Menu</div>
 			    <input id="searchFood" type="text" name="foodItem" onkeyup="searchFood()" placeholder="Search menu.. by food,by course">
 			    <div id="itemBox"></div>
 		    </div>
-<!-- The Modal -->
+         <!-- The Modal -->
 		<div id="myModal" class="modal">
 		  <!-- Modal content -->
 		  <div class="modal-content">

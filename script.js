@@ -42,9 +42,6 @@ function loadPage() {
     divInfo.innerText = "Rs. " + items[i].cost;
     div.appendChild(divInfo);
     document.getElementById('itemBox').appendChild(div);
-    div.addEventListener("click", function() {
-      showTable(this);
-    });
   }
 }
 
@@ -80,6 +77,7 @@ function allowDrop(ev) {
 
 function drag(ev) {
   ev.dataTransfer.setData("text", ev.target.id);
+  
 }
 
 function drop(ev) {
@@ -237,43 +235,6 @@ function reload(){
 
 
 
-function showTable(item) {
-  // var modal = document.getElementById('myModal');
-  // var span = document.getElementsByClassName("close")[0];
-  // modal.style.display = "block";
-
-  // // document.getElementById(item.id).style.backgroundColor = "#ffc04a";
-  // // document.getElementById('T' + (parseInt(item.id) )).style.backgroundColor = "#ffc04a";
-
-  // // var top = document.getElementById('top');
-  // top.innerHTML = "Add to table";
-  // // id=  ;
-  // setData(id);
-
-var txt;
-    var table = prompt("Please enter your table:", "1");
-    var quant=prompt("Please enter number of servings:", "1");
-    if (table == null || table == "") {
-        txt = "User cancelled the prompt.";
-    } else {
-        setData(this);
-        showBill(this);
-    }
-    
-
-  // //close
-  // span.onclick = function() {
-  //   // document.getElementById(modalcontent).innerHTML = "";
-  //   modal.style.display = "none";
-  //   if(key == 1) {
-  //     document.getElementsByClassName("modal-content")[0].innerHTML = actModal;
-  //   }
-  //   document.getElementById(item.id).style.backgroundColor = "white";
-  //   document.getElementById('T' + (parseInt(item.id) + 1)).style.backgroundColor = "white";
-  // }
-
-  
-}
 
 
 
